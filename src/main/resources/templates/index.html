@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+	<p shiro:hasPermission="user:add">aaa</p>
+    进入用户添加功能：<a th:href="@{/add.html}">去添加</a><br>
+    进入用户更新功能：<a th:href="@{/update.html}">去更新</a><br>
+    进入用户列表页面：<a th:href="@{/list.html}">list</a><br>
+    进入管理员界面：<a th:href="@{/admin.html}">管理员</a><br>
+    <a th:href="@{/logout}" shiro:user>退出</a>
+</body>
+</html>
